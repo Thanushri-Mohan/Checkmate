@@ -6,6 +6,7 @@ const timerDisplay = document.getElementById("timer");
 const startButton = document.getElementById("startButton");
 const resetButton = document.getElementById("resetButton");
 
+
 // --------------------
 // TASK FUNCTIONALITY
 // --------------------
@@ -20,11 +21,24 @@ addButton.addEventListener("click", function () {
 
     const listItem = document.createElement("li");
 
-    listItem.textContent = taskText;
+    const taskTextElement = document.createElement("span");
+    taskTextElement.textContent = taskText;
+
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+
+    deleteButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        listItem.remove();
+    });
 
     listItem.addEventListener("click", function () {
-        listItem.style.textDecoration = "line-through";
+        taskTextElement.style.textDecoration = "line-through";
+        taskTextElement.style.opacity = "0.5";
     });
+
+    listItem.appendChild(taskTextElement);
+    listItem.appendChild(deleteButton);
 
     taskList.appendChild(listItem);
 
@@ -67,7 +81,6 @@ startButton.addEventListener("click", function () {
 
     }, 1000);
 });
-
 
 resetButton.addEventListener("click", function () {
 
