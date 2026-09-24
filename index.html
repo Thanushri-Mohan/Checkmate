@@ -4,31 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkmate</title>
-    <link rel="stylesheet" href="style.css">=
+
+    <title>Checkmate | Student Productivity</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Checkmate</h1>
+    <main class="app">
 
-    <p>Get things done. One check at a time.</p>
+        <header class="hero">
+            <h1>Checkmate</h1>
+            <p>Get things done. One check at a time.</p>
+        </header>
 
-    <h2>My Tasks</h2>
 
-    <input type="text" id="taskInput" placeholder="Enter a task">
-    <button id="addButton">Add Task</button>
+        <section class="card">
+            <h2>My Tasks</h2>
 
-    <ul id="taskList">
-    </ul>
+            <div class="task-input">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What do you need to do?"
+                >
 
-    <h2>Study Timer</h2>
+                <button id="addButton">Add Task</button>
+            </div>
 
-    <div id="timer">25:00</div>
+            <ul id="taskList"></ul>
+        </section>
 
-    <button id="startButton">Start</button>
-    <button id="resetButton">Reset</button>
-<script src="script.js"></script>
+
+        <section class="card timer-card">
+            <h2>Study Timer</h2>
+
+            <p class="timer-description">
+                Focus for 25 minutes, then take a break.
+            </p>
+
+            <div id="timer">25:00</div>
+
+            <div class="timer-buttons">
+                <button id="startButton">Start</button>
+                <button id="resetButton">Reset</button>
+            </div>
+        </section>
+
+
+        <footer>
+            <p>Built with HTML, CSS & JavaScript</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
