@@ -1,50 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
-    padding: 40px;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+.app {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.hero {
     text-align: center;
+    margin-bottom: 35px;
 }
 
-h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+.hero h1 {
+    font-size: 48px;
+    margin: 0 0 10px;
 }
 
-p {
-    color: #666;
+.hero p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
 }
 
 input {
-    padding: 10px;
-    width: 250px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    flex: 1;
+    padding: 13px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #111827;
 }
 
 button {
-    padding: 10px 16px;
-    margin-left: 5px;
+    padding: 13px 18px;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #222;
+    border-radius: 8px;
+    background: #111827;
     color: white;
+    font-size: 15px;
+    cursor: pointer;
 }
 
 button:hover {
-    opacity: 0.8;
-}
-
-#timer {
-    font-size: 48px;
-    margin: 20px;
-    font-weight: bold;
+    opacity: 0.85;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    margin: 20px 0 0;
+}
+
+li {
+    background: #f3f4f6;
+    padding: 13px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+li:hover {
+    background: #e5e7eb;
+}
+
+.timer-card {
+    text-align: center;
+}
+
+.timer-description {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+#timer {
+    font-size: 64px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 20px 0;
+}
+
+.timer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+
+    .app {
+        width: 92%;
+        padding: 30px 0;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    #timer {
+        font-size: 52px;
+    }
 }
 
 li {
